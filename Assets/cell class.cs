@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Virus : MonoBehaviour
+public abstract class Cell : MonoBehaviour
 {
     public float Health;
 
@@ -12,12 +12,11 @@ public abstract class Virus : MonoBehaviour
 
     public string Name;
 
-    public Vector3 SpawnLocation;
+  
 
     public abstract void Shooting();
 
-
     public abstract void Death();
-    
+
 
 }
