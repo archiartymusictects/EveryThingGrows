@@ -18,7 +18,4 @@ public abstract class Virus : MonoBehaviour
     public abstract void Death();
     
 
-
-
-
 }
