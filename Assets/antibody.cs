@@ -12,6 +12,8 @@ public abstract class antibody : MonoBehaviour
 
     public string Name;
 
+    public Vector3 SpawnLocation;
+
     public abstract void Shooting();
 
 
