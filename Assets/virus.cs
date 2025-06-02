@@ -2,13 +2,14 @@ using UnityEngine;
 
 public class virus
 {
-    float Health;
+    public float Health;
 
-    float damage; 
+    public float Damage;
 
+    public float Speed;
 
+    public string Name;
 
-
-
+    
 
 }
