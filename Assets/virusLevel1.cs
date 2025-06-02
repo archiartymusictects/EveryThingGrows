@@ -12,17 +12,16 @@ public class virusLevel1 : Virus
     // Update is called once per frame
     void Update()
     {
-        void Update()
-        {
             // Example: decrease health every second
-            Health -= Time.deltaTime / 2;
-            Debug.Log("health" + Health);
+        Health -= Time.deltaTime / 2;
+        Debug.Log("health" + Health);
 
-            if (Health <= 0)
-            {
-                Death();
-            }
+        if (Health <= 0)
+        {
+            Death();
         }
+
+        transform.Translate(transform.forward * Speed * Time.deltaTime);
 
     }
 
