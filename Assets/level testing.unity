@@ -788,15 +788,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7864115196384709454, guid: a6fbcb16991d6fd449db1af4c018a1f7, type: 3}
       propertyPath: Speed
-      value: 4
+      value: 6.85
       objectReference: {fileID: 0}
     - target: {fileID: 7864115196384709454, guid: a6fbcb16991d6fd449db1af4c018a1f7, type: 3}
       propertyPath: Damage
-      value: 3.11
+      value: 3.3
       objectReference: {fileID: 0}
     - target: {fileID: 7864115196384709454, guid: a6fbcb16991d6fd449db1af4c018a1f7, type: 3}
       propertyPath: Health
-      value: 4.68
+      value: 6.25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
