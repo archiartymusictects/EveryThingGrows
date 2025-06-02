@@ -31,7 +31,14 @@ public class TugOfWarHealth : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.C))
             EnemyDamaged(10); // Press C: Enemy loses 10 HP (bar moves right)
-    }
 
+        if (currentTugOfWarHealth <= 0)
+            Debug.Log("Player loses!"); // Enemy wins
+
+        if (currentTugOfWarHealth >= 100)
+            Debug.Log("Player wins!"); // Enemy loses
+
+    }
+ 
 
 }
