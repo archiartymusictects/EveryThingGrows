@@ -12,8 +12,6 @@ public abstract class Cell : MonoBehaviour
 
     public string Name;
 
-  
-
     public abstract void Shooting();
 
     public abstract void Death();
