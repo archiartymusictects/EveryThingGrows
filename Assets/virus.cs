@@ -1,6 +1,8 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class virus
+public abstract class Virus : MonoBehaviour
 {
     public float Health;
 
@@ -10,6 +12,13 @@ public class virus
 
     public string Name;
 
+    public abstract void Shooting();
+
+
+    public abstract void Death();
     
+
+
+
 
 }
