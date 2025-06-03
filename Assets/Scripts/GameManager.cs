@@ -27,9 +27,7 @@ public class GameManager : MonoBehaviour
         tugOfWarHealth = 50; 
         exp = 0; 
         level = 1;
-        currency = 10;
-
-        enemyBaseHealth = 100;
+        currency = 100;
 
         //subscribe to events here?
      
@@ -69,6 +67,7 @@ public class GameManager : MonoBehaviour
 
         // logic for virus growth here, keep it simple and change scale?
         player.transform.localScale = new Vector3(level, level, level);
+        
     }
 
     private void GainExp()
