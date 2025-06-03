@@ -459,32 +459,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1375197444 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4057844321371865560, guid: a6fbcb16991d6fd449db1af4c018a1f7, type: 3}
-  m_PrefabInstance: {fileID: 4277822514906160257}
-  m_PrefabAsset: {fileID: 0}
---- !u!135 &1375197450
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1375197444}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 5.11
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1548481516
 GameObject:
   m_ObjectHideFlags: 0
@@ -622,82 +596,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50.325, y: 0, z: 0}
---- !u!1001 &4277822514906160257
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4057844321371865560, guid: a6fbcb16991d6fd449db1af4c018a1f7, type: 3}
-      propertyPath: m_Name
-      value: Cube
-      objectReference: {fileID: 0}
-    - target: {fileID: 7330230439075889117, guid: a6fbcb16991d6fd449db1af4c018a1f7, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 5.45
-      objectReference: {fileID: 0}
-    - target: {fileID: 7330230439075889117, guid: a6fbcb16991d6fd449db1af4c018a1f7, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 5.04
-      objectReference: {fileID: 0}
-    - target: {fileID: 7330230439075889117, guid: a6fbcb16991d6fd449db1af4c018a1f7, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -3.91
-      objectReference: {fileID: 0}
-    - target: {fileID: 7330230439075889117, guid: a6fbcb16991d6fd449db1af4c018a1f7, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7330230439075889117, guid: a6fbcb16991d6fd449db1af4c018a1f7, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7330230439075889117, guid: a6fbcb16991d6fd449db1af4c018a1f7, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7330230439075889117, guid: a6fbcb16991d6fd449db1af4c018a1f7, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7330230439075889117, guid: a6fbcb16991d6fd449db1af4c018a1f7, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7330230439075889117, guid: a6fbcb16991d6fd449db1af4c018a1f7, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7330230439075889117, guid: a6fbcb16991d6fd449db1af4c018a1f7, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7864115196384709454, guid: a6fbcb16991d6fd449db1af4c018a1f7, type: 3}
-      propertyPath: Name
-      value: virusLevel1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7864115196384709454, guid: a6fbcb16991d6fd449db1af4c018a1f7, type: 3}
-      propertyPath: Speed
-      value: 6.85
-      objectReference: {fileID: 0}
-    - target: {fileID: 7864115196384709454, guid: a6fbcb16991d6fd449db1af4c018a1f7, type: 3}
-      propertyPath: Damage
-      value: 3.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7864115196384709454, guid: a6fbcb16991d6fd449db1af4c018a1f7, type: 3}
-      propertyPath: Health
-      value: 6.25
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4057844321371865560, guid: a6fbcb16991d6fd449db1af4c018a1f7, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1375197450}
-  m_SourcePrefab: {fileID: 100100000, guid: a6fbcb16991d6fd449db1af4c018a1f7, type: 3}
 --- !u!1001 &5121660604354943692
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -753,7 +651,7 @@ PrefabInstance:
     - target: {fileID: 5368765989645276893, guid: 2e63a76cc69eafa49bf80182d07ec6f7, type: 3}
       propertyPath: cellToSpawn
       value: 
-      objectReference: {fileID: 1375197444}
+      objectReference: {fileID: 4057844321371865560, guid: a6fbcb16991d6fd449db1af4c018a1f7, type: 3}
     - target: {fileID: 6291892050255600641, guid: 2e63a76cc69eafa49bf80182d07ec6f7, type: 3}
       propertyPath: m_Name
       value: virus Spawner
@@ -772,4 +670,3 @@ SceneRoots:
   - {fileID: 606941197}
   - {fileID: 5121660604354943692}
   - {fileID: 1079670455}
-  - {fileID: 4277822514906160257}
