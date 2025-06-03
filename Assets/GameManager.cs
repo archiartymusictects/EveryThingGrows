@@ -5,16 +5,15 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
+    private int tugOfWarHealth;
+
     //Player variables
-    private int playerBaseHealth;
     private float currency;
     private float currencyGrowthRate = 0.1f;
     private float exp;
     private int level;
     [SerializeField] private GameObject player; 
 
-    //enemy variables
-    private int enemyBaseHealth;
 
     [SerializeField] private TextMeshProUGUI gameWinText; //could switch these to a gameobject prefab to do a whole game win/lose screen
     [SerializeField] private TextMeshProUGUI gameOverText;
@@ -25,7 +24,7 @@ public class GameManager : MonoBehaviour
     {
         instance = this;
 
-        playerBaseHealth = 100;
+        tugOfWarHealth = 50; 
         exp = 0; 
         level = 1;
         currency = 10;
@@ -84,9 +83,9 @@ public class GameManager : MonoBehaviour
 
     private void PlayerTakeDamage(int damage)
     {
-        playerBaseHealth -= damage;
+        tugOfWarHealth -= damage;
 
-        if (playerBaseHealth <= 0)
+        if (tugOfWarHealth <= 0)
         {
             GameOver();
         }
@@ -94,9 +93,9 @@ public class GameManager : MonoBehaviour
 
     private void EnemyTakeDamage(int damage)
     {
-        enemyBaseHealth -= damage;
+        tugOfWarHealth += damage;
 
-        if (enemyBaseHealth <= 0)
+        if (tugOfWarHealth >= 100)
         {
             GameWin();
         }
