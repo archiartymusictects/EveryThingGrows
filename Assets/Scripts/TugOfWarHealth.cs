@@ -1,11 +1,14 @@
+using TMPro;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UI;
+
 
 public class TugOfWarHealth : MonoBehaviour
 {
     public Slider TugOfWarHealthBar; // Assign in Inspector
     public float currentTugOfWarHealth = 50; // Start at midpoint (50/100)
-
+    public TextMeshProUGUI ResultText;
     void Start()
     {
         TugOfWarHealthBar.value = currentTugOfWarHealth; // Initialize the slider
@@ -24,6 +27,7 @@ public class TugOfWarHealth : MonoBehaviour
         currentTugOfWarHealth = Mathf.Min(100, currentTugOfWarHealth + damage);
         TugOfWarHealthBar.value = currentTugOfWarHealth;
     }
+
     void Update()
     {     // health changing test
         if (Input.GetKeyDown(KeyCode.X))
@@ -31,14 +35,15 @@ public class TugOfWarHealth : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.C))
             EnemyDamaged(10); // Press C: Enemy loses 10 HP (bar moves right)
-
+        
         if (currentTugOfWarHealth <= 0)
             Debug.Log("Player loses!"); // Enemy wins
+            ResultText.text = "DEFEAT!";
 
         if (currentTugOfWarHealth >= 100)
             Debug.Log("Player wins!"); // Enemy loses
-
+       
     }
- 
+
 
 }
