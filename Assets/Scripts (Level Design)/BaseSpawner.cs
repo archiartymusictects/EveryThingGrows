@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Spawner : MonoBehaviour
+public class BaseSpawner : MonoBehaviour
 {
     [SerializeField] GameObject entityPrefab;
     [SerializeField] Transform spawnPosition;
