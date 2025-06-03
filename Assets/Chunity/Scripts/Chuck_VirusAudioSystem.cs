@@ -18,8 +18,6 @@ public class Chuck_VirusAudioSystem : MonoBehaviour {
 
         chuck.RunCode(@"
             global float virusScore;
-            <<< ""[Chuck] Heartbeat running"" >>>;
-
             class Heartbeat extends Chugraph {
                 SinOsc s => ADSR env => dac;
                 60 => s.freq;
@@ -144,7 +142,7 @@ public class Chuck_VirusAudioSystem : MonoBehaviour {
                         {
                             // --- ModalBar: bell/mallet strike ---
                             Std.rand2(0, 4) => mb.preset; // different materials
-                            Std.rand2f(2.0, 4.5) => mb.stickHardness;
+                            Std.rand2f(0.0, 1.0) => mb.stickHardness;
                             600.0 + Std.rand2f(0, 800.0) => mb.freq;
                             mb.noteOn(1.0);
                             300::ms => now;
