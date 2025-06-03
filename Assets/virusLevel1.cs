@@ -27,12 +27,12 @@ public class virusLevel1 : Virus
 
     public override void Death()
     {
-        throw new System.NotImplementedException();
+        Debug.Log("death");
     }
 
     public override void Shooting()
     {
-        throw new System.NotImplementedException();
+        Debug.Log("shoot");
     }
 
 }
