@@ -72,6 +72,7 @@ public class TugOfWarHealth : MonoBehaviour
 
     IEnumerator CheckGameOverCoroutine()
     {
+        
         // Wait until health bar finishes animating
         while (Mathf.Abs(TugOfWarHealthBar.value - currentTugOfWarHealth) > 0.1f)
         {
@@ -81,16 +82,18 @@ public class TugOfWarHealth : MonoBehaviour
         if (currentTugOfWarHealth <= 0 && !isGameOver)
         {
             isGameOver = true;
-            Debug.Log("Player loses!"); // Enemy wins
+            
             resultText.text = "DEFEAT!";
             resultText.color = Color.red;
+            resultText.gameObject.SetActive(true);
             Time.timeScale = 0f;
         }
         else if (currentTugOfWarHealth >= 100 && !isGameOver)
         {
-            Debug.Log("Player wins!"); // Enemy loses
+            
             resultText.text = "VICTORY!";
             resultText.color = Color.green;
+            resultText.gameObject.SetActive(true);
             Time.timeScale = 0f; // Freeze game
         }
     }

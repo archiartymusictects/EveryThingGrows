@@ -3,9 +3,10 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
 
-    public GameObject cellToSpawn;  
-    public Vector3 spawnPosition = Vector3.zero; 
-    public Quaternion spawnRotation = Quaternion.identity;
+    public GameObject cellToSpawn;
+    public GameObject spawnPoint;
+    public Vector3 spawnPosition; 
+    public Quaternion spawnRotation;
 
     public int spawnRate;
     
@@ -13,20 +14,30 @@ public class Spawner : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        spawnPosition = spawnPoint.transform.position;
+        spawnRotation = spawnPoint.transform.rotation;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Time.frameCount % spawnRate == 0) 
+        if (spawnRate != 0)
         {
-            spawn(); 
-                
+            if (Time.frameCount % spawnRate == 0)
+            {
+                Spawn();
+
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha1) && gameObject.CompareTag("Player") && GameManager.instance.GetCurrency() >= 20)
+        {
+            Spawn();
+            GameManager.instance.ChangeCurrency(-20);
         }
     }
 
-    void spawn()
+    void Spawn()
     {
         GameObject newObject = Instantiate(cellToSpawn, spawnPosition, spawnRotation);
 

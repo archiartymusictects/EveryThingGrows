@@ -5,14 +5,16 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    private int tugOfWarHealth;
+    [SerializeField ]private int tugOfWarHealth;
 
     //Player variables
-    private float currency;
+    [SerializeField] private float currency;
     private float currencyGrowthRate = 0.1f;
-    private float exp;
-    private int level;
-    [SerializeField] private GameObject player; 
+    [SerializeField] private float exp;
+    [SerializeField] private int level;
+    [SerializeField] private GameObject player;
+    [SerializeField] private GameObject growEffect;
+    [SerializeField] private TugOfWarHealth health;
 
 
     [SerializeField] private TextMeshProUGUI gameWinText; //could switch these to a gameobject prefab to do a whole game win/lose screen
@@ -46,7 +48,11 @@ public class GameManager : MonoBehaviour
         currency += currencyGrowthRate; //player currency generates slowly over time, maybe adjust rate when virus grows? 
     }
 
-    void ChangeCurrency(int change)
+    public float GetCurrency()
+    {
+        return currency;
+    }
+    public void ChangeCurrency(int change)
     {
         currency += change;
     }    
@@ -67,12 +73,12 @@ public class GameManager : MonoBehaviour
 
         // logic for virus growth here, keep it simple and change scale?
         player.transform.localScale = new Vector3(level, level, level);
-        
+        growEffect.SetActive(true);
     }
 
-    private void GainExp()
+    public void GainExp()
     {
-        exp++;
+        exp += 10;
         if (exp >= 100)
         {
             Grow();
@@ -80,23 +86,24 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void PlayerTakeDamage(int damage)
+    public void PlayerTakeDamage(int damage)
     {
         tugOfWarHealth -= damage;
+        health.PlayerDamaged(damage);
 
         if (tugOfWarHealth <= 0)
         {
-            GameOver();
+            //GameOver();
         }
     }
 
-    private void EnemyTakeDamage(int damage)
+    public void EnemyTakeDamage(int damage)
     {
         tugOfWarHealth += damage;
-
+        health.EnemyDamaged(damage);
         if (tugOfWarHealth >= 100)
         {
-            GameWin();
+           // GameWin();
         }
 
     }

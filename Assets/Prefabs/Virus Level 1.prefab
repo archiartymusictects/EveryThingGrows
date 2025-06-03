@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5612263504482352935}
   - component: {fileID: 7864115196384709454}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Virus Level 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -123,5 +123,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Health: 4.08
   Damage: 4.39
-  Speed: 8.27
+  Speed: 4
   Name: level 1 virus

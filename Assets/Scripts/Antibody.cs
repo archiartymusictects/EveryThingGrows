@@ -5,12 +5,20 @@ using UnityEngine;
 public abstract class Antibody : Cell
 {
 
-    protected Antibody antibodyClass;
+    //protected Antibody antibodyClass;
 
-    public Antibody(Antibody antibodyClass)
+    //public Antibody(Antibody antibodyClass)
+    //{
+    //    this.antibodyClass = antibodyClass;
+    //}
+
+    private void OnTriggerEnter(Collider other)
     {
-        this.antibodyClass = antibodyClass;
+        if (other.gameObject.CompareTag("Player"))
+        {
+            GameManager.instance.PlayerTakeDamage(10);
+            Destroy(gameObject);
+        }
     }
-
 
 }
