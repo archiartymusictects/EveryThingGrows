@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField ]private int tugOfWarHealth;
 
-    //Player variables
+    [Header("Player Variables")]//Player variables
     [SerializeField] private float currency;
     private float currencyGrowthRate = 0.1f;
     [SerializeField] private float exp;
@@ -16,9 +16,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject growEffect;
     [SerializeField] private TugOfWarHealth health;
 
-
-    [SerializeField] private TextMeshProUGUI gameWinText; //could switch these to a gameobject prefab to do a whole game win/lose screen
-    [SerializeField] private TextMeshProUGUI gameOverText;
+    [Header("UI Refs")]
+    [SerializeField] private TextMeshProUGUI currencyValueText;
+    [SerializeField] private TextMeshProUGUI levelValueText;
+    [SerializeField] private TextMeshProUGUI experienceValueText; 
     
 
 
@@ -29,7 +30,7 @@ public class GameManager : MonoBehaviour
         tugOfWarHealth = 50; 
         exp = 0; 
         level = 1;
-        currency = 100;
+        currency = 100f;
 
         //subscribe to events here?
      
@@ -37,15 +38,12 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        
-
-        
-
+        currencyValueText.text = Mathf.RoundToInt(currency).ToString();
     }
 
     private void FixedUpdate()
     {
-        currency += currencyGrowthRate; //player currency generates slowly over time, maybe adjust rate when virus grows? 
+        currency += currencyGrowthRate; 
     }
 
     public float GetCurrency()
@@ -59,18 +57,18 @@ public class GameManager : MonoBehaviour
 
     void GameWin()
     {
-        gameWinText.enabled = true;
+        //gameWinText.enabled = true;
     }
 
     void GameOver()
     {
-        gameOverText.enabled = true;
+       // gameOverText.enabled = true;
     }
 
     private void Grow()
     {
         level++;
-
+        levelValueText.text = level.ToString();
         // logic for virus growth here, keep it simple and change scale?
         player.transform.localScale = new Vector3(level, level, level);
         growEffect.SetActive(true);
@@ -84,6 +82,7 @@ public class GameManager : MonoBehaviour
             Grow();
             exp = 0;
         }
+        experienceValueText.text = exp.ToString();
     }
 
     public void PlayerTakeDamage(int damage)
