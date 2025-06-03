@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1234749651976862261}
   - component: {fileID: 6703583129212063651}
   - component: {fileID: 7132738968621606587}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Antibody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
