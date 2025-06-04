@@ -13,6 +13,9 @@ public class TugOfWarHealth : MonoBehaviour
     public float smoothSpeed = 5f;         // How fast the bar animates
     public TextMeshProUGUI resultText; // Assign in Inspector for game over messages
     private bool isGameOver = false; // Track if game is over
+
+    [SerializeField] Slider audioSlider;
+
     void Start()
     {
         TugOfWarHealthBar.value = currentTugOfWarHealth; // Initialize the slider
@@ -50,6 +53,8 @@ public class TugOfWarHealth : MonoBehaviour
         currentTugOfWarHealth = Mathf.Min(100, currentTugOfWarHealth + damage);
         /*TugOfWarHealthBar.value = currentTugOfWarHealth;*/ // This line is now in Update() for smooth animation
         if (currentTugOfWarHealth >= 100) StartCoroutine(CheckGameOverCoroutine());
+
+        audioSlider.value += 10;
     }
 
     /* void CheckGameOver()
