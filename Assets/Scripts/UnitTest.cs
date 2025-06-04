@@ -28,7 +28,7 @@ public class UnitTest : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-
+        
         if (other.gameObject.CompareTag("Enemy"))
         {
             GameManager.instance.EnemyTakeDamage(20);
@@ -42,6 +42,10 @@ public class UnitTest : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
+       
+        
+        GameManager.instance.GainExp();
+        
         Destroy(gameObject);
     }
 

@@ -76,7 +76,7 @@ public class GameManager : MonoBehaviour
 
     public void GainExp()
     {
-        exp += 10;
+        exp += 20;
         if (exp >= 100)
         {
             Grow();
