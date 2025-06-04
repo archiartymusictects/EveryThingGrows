@@ -28,6 +28,15 @@ public class UnitTest : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            GameManager.instance.EnemyTakeDamage(20);
+        }
+        if (other.gameObject.CompareTag("Player"))
+        {
+            GameManager.instance.PlayerTakeDamage(20);
+        }
         Destroy(gameObject);
     }
 
